@@ -10,8 +10,9 @@ public class RegistrationController {
 
 
 
-    @PostMapping("/confirm)
-    public confirmRegistration(@RequestBody UserDetails userDetails) {
+    @PostMapping("/confirm")
+    public String confirmRegistration(@RequestBody UserDetails userDetails)
+    {
         //process registration
         String responseMessage = String.format("Received details for %s with email %s",
                 userDetails.getName(), userDetails.getEmail());
